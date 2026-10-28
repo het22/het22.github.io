@@ -1,0 +1,14 @@
+title: het22
+remote_theme: riggraz/no-style-please
+
+theme_config:
+  appearance: auto
+  back_home_text: ".."
+  date_format: "%Y-%m-%d"
+  show_description: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
