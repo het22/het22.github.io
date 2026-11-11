@@ -1,8 +1,15 @@
 # Code Review Criteria
 
-## 1. 존재할 수 없는 상태는 애초에 만들 수 없도록 타입으로 제약을 준다
+## 1. 타입은 존재할 수 없는 상태를 표현하지 않는다
 
-상태 타입이 명세에 없는 조합이나 전이를 표현할 수 있으면 지적한다. 주석으로 금지한 조합은 타입으로 막지 않은 것과 같다.
+- 타입이 요구사항에 없는 상태를 표현하고 있지 않은지 확인한다.
+- 주석으로 적힌 제약을 타입 정의로 옮길 수 있는지 확인한다.
 
-- references: [react-query-use-query-result.md](references/react-query-use-query-result.md)
-- changelog: [202610281530.md](changelog/202610281530.md)
+cases: [step-state-machine.md](cases/step-state-machine.md)
+
+## 2. 요구사항 구현 책임을 호출부에게 전가하지 않는다
+
+- 호출부에서 모듈 내부 규칙을 몰라도 올바르게 사용할 수 있는지 확인한다.
+- 내부 로직이 복잡해진다는 이유로 호출부에 구현 책임을 전가하지 않는다.
+
+cases: [step-state-machine.md](cases/step-state-machine.md)
